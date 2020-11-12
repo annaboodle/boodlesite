@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "39172407a5353432ccd830f8418c91e1",
+    "revision": "7c90d24ff51c2f69f51e2c250d1230b8",
     "url": "/boodlesite/index.html"
   },
   {
-    "revision": "65a30e0aa1b1f38a49cf",
-    "url": "/boodlesite/static/css/main.c6fd2a0b.chunk.css"
+    "revision": "1e6c7db2bc997669bc8a",
+    "url": "/boodlesite/static/css/main.bc422f85.chunk.css"
   },
   {
     "revision": "986f4eac59dabbd575a9",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/boodlesite/static/js/2.fe430af4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65a30e0aa1b1f38a49cf",
+    "revision": "1e6c7db2bc997669bc8a",
     "url": "/boodlesite/static/js/main.49a68357.chunk.js"
   },
   {

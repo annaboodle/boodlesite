@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/boodlesite/precache-manifest.b26449ddf2ec9e058d63bc74d98c3493.js"
+  "/boodlesite/precache-manifest.41241b95a350b36393628d36acbb41a9.js"
 );
 
 self.addEventListener('message', (event) => {
