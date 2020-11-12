@@ -1,0 +1,114 @@
+// variables
+$mobile: 768px;
+$headerFont: "Days One", sans-serif;
+$bodyFont: "Fanwood Text", serif;
+
+:root {
+  --gradient-start: #ff5092; // pink
+  --gradient-mid: #ff9182; // sunset orange
+  --gradient-mid2: #ffbc74; // darker gold
+  --gradient-end: #ffd869; // bright gold
+
+  --link-color: #ff5092;
+  --link-hover: #ff9182;
+}
+
+// shared
+body * {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+// fonts & typography
+body,
+input,
+textarea {
+  font-family: $bodyFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headerFont;
+}
+
+p {
+  margin-top: 0;
+}
+
+p,
+li {
+  line-height: 1.5em;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
+// project and about page font styles
+.project-page,
+.about-page {
+  h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    @media (max-width: $mobile) {
+      font-size: 2.5em;
+    }
+  }
+
+  h2 {
+    position: relative;
+    left: -60px;
+
+    @media (max-width: $mobile) {
+      left: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 150px;
+      height: 3px;
+      display: block;
+      background-image: linear-gradient(
+        90deg,
+        var(--gradient-start),
+        var(--gradient-end)
+      );
+      margin-bottom: 12px;
+      position: relative;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+.project-page {
+  h2 {
+    margin-top: 3em;
+  }
+}
+
+.about-page {
+  h2 {
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  label {
+    text-align: center;
+  }
+}
