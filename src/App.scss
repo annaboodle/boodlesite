@@ -43,6 +43,10 @@ h6 {
   font-family: $headerFont;
 }
 
+h3 {
+  font-weight: normal;
+}
+
 p {
   margin-top: 0;
 }
@@ -53,12 +57,35 @@ li {
   font-size: 17px;
 }
 
+li p {
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
   color: var(--link-color);
   &:hover {
     color: var(--link-hover);
   }
+}
+
+strong {
+  font-family: "PT Serif", serif;
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+figure {
+  margin: 30px 40px;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+
+figcaption {
+  text-align: right;
 }
 
 // project and about page font styles

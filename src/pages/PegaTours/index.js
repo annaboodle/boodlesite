@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-import { mixins } from "../../styles/shared";
+import { mixins, variables } from "../../styles/shared";
 
 import PageWrapper from "../../components/PageWrapper";
 
@@ -135,6 +135,9 @@ export default function PegaTours() {
           <div
             css={css`
               ${mixins.rightImg}
+              @media (max-width: ${variables.mobile}px) {
+                width: 33%;
+              }
             `}
           >
             <img src={walkmeEditor} alt="walkme" />
@@ -360,7 +363,7 @@ export default function PegaTours() {
           <p>
             In reviewing our initial goals for this project, we had succeeded in
             providing users with a clear starting point to learn about our
-            product.&nbsp; We'd also come up with many more ideas for future
+            product. We'd also come up with many more ideas for future
             improvements. It was time for another round of experiments!
           </p>
         </div>

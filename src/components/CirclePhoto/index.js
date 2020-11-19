@@ -30,8 +30,8 @@ export default function CirclePhoto({ url, label, side }) {
           float: none;
           display: flex;
           justify-content: center;
-          width: 100%;
           align-items: center;
+          margin: 20px 0 0 0;
         }
       `}
     >

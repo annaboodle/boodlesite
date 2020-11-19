@@ -67,6 +67,7 @@ export default function ProjectTile({
           }
         `}
       >
+        {/* image for mobile only */}
         <div
           css={css`
             display: none;
@@ -77,6 +78,8 @@ export default function ProjectTile({
 
             @media (max-width: ${variables.mobile}px) {
               display: block;
+              left: 20%;
+              position: relative;
             }
           `}
         ></div>
@@ -109,9 +112,8 @@ export default function ProjectTile({
               top: -30px;
               margin-bottom: -30px;
               width: 80%;
-              left: 20%;
               z-index: 1;
-              border-width: 10px;
+              border-width: 5px;
             }
           `}
         >
@@ -124,7 +126,6 @@ export default function ProjectTile({
           >
             <h3
               css={css`
-                color: ${colors.startColor};
                 margin: 0 0 10px;
               `}
             >

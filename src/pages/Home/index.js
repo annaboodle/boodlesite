@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <div>
       <Hero></Hero>
+
       <SectionHeader
         headline="Projects"
         subhead="Let's hop to it"

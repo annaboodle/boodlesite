@@ -53,7 +53,7 @@ export default function Projects() {
         background={homeward}
         year="2018"
         name="Homeward"
-        type="ux design // research // prototyping"
+        type="ux design // ux research // prototyping"
         side="left"
         vertical="bottom"
         styles={first}
@@ -63,18 +63,17 @@ export default function Projects() {
         background={hubDesignSystem}
         year="2016"
         name="HubSpot design system"
-        type="front-end dev // research // training"
+        type="front-end dev // ux research // training"
         side="right"
         vertical="bottom"
         styles={second}
         link={paths.hubDesignSystem}
       />
-
       <ProjectTile
         background={pegaTours}
         year="2018"
         name="Onboarding tours"
-        type="design // research // copywriting"
+        type="ux design // ux research // copywriting"
         side="left"
         vertical="top"
         styles={third}

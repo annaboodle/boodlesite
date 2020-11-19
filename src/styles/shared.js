@@ -115,7 +115,6 @@ export const mixins = {
     border-radius: 5px;
     background: ${colors.buttonColor};
     font-size: 14px;
-    font-weight: bold;
     font-family: ${variables.headerFont};
     text-transform: uppercase;
     color: #fff;

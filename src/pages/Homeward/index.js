@@ -81,7 +81,7 @@ export default function Homeward() {
             </li>
             <li>
               <strong>
-                Search for roommates or apartments -- but separately
+                Search for roommates or apartments — but separately
               </strong>{" "}
               (ie: Craigslist, Roomster)
             </li>
@@ -435,7 +435,7 @@ export default function Homeward() {
             <img src={wireframes} alt="wireframes" />
           </div>
         </div>
-        
+
         {/**************************************/}
         {/**************************************/}
         {/**************************************/}
@@ -456,10 +456,9 @@ export default function Homeward() {
           </p> */}
           <p>
             In future iterations, I plan to focus on fixing all issues from the
-            first round of usability testing. Next, I’ll integrate more
-            features— such as allowing users to schedule apartment viewings,
-            apply to apartments, and take on a search with more than one
-            roommate.
+            first round of usability testing. Next, I’ll integrate more features
+            — such as allowing users to schedule apartment viewings, apply to
+            apartments, and take on a search with more than one roommate.
           </p>
           <p>
             Thanks for letting me share Homeward with you! I hope you’ve enjoyed

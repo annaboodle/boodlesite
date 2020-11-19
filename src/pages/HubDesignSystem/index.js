@@ -237,6 +237,10 @@ export default function HubDesignSystem() {
             <div
               css={css`
                 ${mixins.imageInRow}
+                @media (max-width: ${variables.mobile}px) {
+                  margin-right: 0;
+                  margin-top: 5px;
+                }
               `}
             >
               <img
@@ -247,6 +251,9 @@ export default function HubDesignSystem() {
             <div
               css={css`
                 ${mixins.imageInRow}
+                @media (max-width: ${variables.mobile}px) {
+                  margin-left: 0;
+                }
               `}
             >
               <img
