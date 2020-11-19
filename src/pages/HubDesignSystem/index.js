@@ -240,6 +240,7 @@ export default function HubDesignSystem() {
                 @media (max-width: ${variables.mobile}px) {
                   margin-right: 0;
                   margin-top: 5px;
+                  flex-basis: unset;
                 }
               `}
             >
@@ -253,6 +254,7 @@ export default function HubDesignSystem() {
                 ${mixins.imageInRow}
                 @media (max-width: ${variables.mobile}px) {
                   margin-left: 0;
+                  flex-basis: unset;
                 }
               `}
             >
