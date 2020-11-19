@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/boodlesite/static/css/main.bc422f85.chunk.css",
-    "main.js": "/boodlesite/static/js/main.49a68357.chunk.js",
-    "main.js.map": "/boodlesite/static/js/main.49a68357.chunk.js.map",
+    "main.css": "/boodlesite/static/css/main.94591326.chunk.css",
+    "main.js": "/boodlesite/static/js/main.d77250eb.chunk.js",
+    "main.js.map": "/boodlesite/static/js/main.d77250eb.chunk.js.map",
     "runtime-main.js": "/boodlesite/static/js/runtime-main.b1f59aa1.js",
     "runtime-main.js.map": "/boodlesite/static/js/runtime-main.b1f59aa1.js.map",
     "static/js/2.fe430af4.chunk.js": "/boodlesite/static/js/2.fe430af4.chunk.js",
     "static/js/2.fe430af4.chunk.js.map": "/boodlesite/static/js/2.fe430af4.chunk.js.map",
     "index.html": "/boodlesite/index.html",
-    "precache-manifest.41241b95a350b36393628d36acbb41a9.js": "/boodlesite/precache-manifest.41241b95a350b36393628d36acbb41a9.js",
+    "precache-manifest.66c18732dc4f2de3d4045a1340e5a4af.js": "/boodlesite/precache-manifest.66c18732dc4f2de3d4045a1340e5a4af.js",
     "service-worker.js": "/boodlesite/service-worker.js",
-    "static/css/main.bc422f85.chunk.css.map": "/boodlesite/static/css/main.bc422f85.chunk.css.map",
+    "static/css/main.94591326.chunk.css.map": "/boodlesite/static/css/main.94591326.chunk.css.map",
     "static/js/2.fe430af4.chunk.js.LICENSE.txt": "/boodlesite/static/js/2.fe430af4.chunk.js.LICENSE.txt",
     "static/media/Analytics.png": "/boodlesite/static/media/Analytics.017f18c9.png",
     "static/media/AnnabethCarroll.pdf": "/boodlesite/static/media/AnnabethCarroll.506d4018.pdf",
@@ -60,7 +60,7 @@
   "entrypoints": [
     "static/js/runtime-main.b1f59aa1.js",
     "static/js/2.fe430af4.chunk.js",
-    "static/css/main.bc422f85.chunk.css",
-    "static/js/main.49a68357.chunk.js"
+    "static/css/main.94591326.chunk.css",
+    "static/js/main.d77250eb.chunk.js"
   ]
 }
