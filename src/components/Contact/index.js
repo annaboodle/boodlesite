@@ -6,14 +6,19 @@ import { css, jsx } from "@emotion/core";
 import { variables, mixins } from "../../styles/shared";
 
 export default function Contact() {
-  let formAction =
+  const formAction =
     "https://docs.google.com/forms/u/0/d/e/1FAIpQLScfNFCzvaMjdhkjMhT8pFbMD50ZDHPtiREtfKxZhv5yHcT2oQ/formResponse";
+  const gFormNameEntry = "entry.1867961456";
+  const gFormMessageEntry = "entry.444461217";
+  const gFormEmailEntry = "entry.1198240554";
+  const gFormBotcatcherEntry = "entry.1713606778";
 
   const [formSubmitted, updateFormSubmitted] = useState(false);
 
   const [message, updateMessage] = useState("");
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
+  const [botcatcherField, updateBotcatcherField] = useState("");
 
   return (
     <div
@@ -76,7 +81,7 @@ export default function Contact() {
               css={css`
                 ${mixins.formInput}
               `}
-              name="entry.1867961456"
+              name={gFormNameEntry}
               onChange={(e) => {
                 updateName(e.target.value);
               }}
@@ -95,7 +100,7 @@ export default function Contact() {
               css={css`
                 ${mixins.formInput}
               `}
-              name="entry.1198240554"
+              name={gFormEmailEntry}
               onChange={(e) => {
                 updateEmail(e.target.value);
               }}
@@ -120,7 +125,27 @@ export default function Contact() {
               updateMessage(e.target.value);
             }}
             value={message}
-            name="entry.444461217"
+            name={gFormMessageEntry}
+          />
+        </div>
+
+        <div
+          css={css`
+            display: none;
+            ${mixins.formField}
+          `}
+        >
+          <label>Botcatcher</label>
+          <input
+            css={css`
+              ${mixins.formInput}
+            `}
+            name={gFormBotcatcherEntry}
+            onChange={(e) => {
+              updateBotcatcherField(e.target.value);
+            }}
+            value={botcatcherField}
+            type="text"
           />
         </div>
 
