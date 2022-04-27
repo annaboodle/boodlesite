@@ -43,7 +43,7 @@ export const variables = {
 
   pagePadding: 20, // padding on left and right sides of page
 
-  bodyFont: '"Fanwood Text", serif',
+  bodyFont: '"Open Sans", serif',
   headerFont: '"Days One", serif',
   secondaryFont: '"Catamaran", sans-serif',
 
@@ -90,6 +90,9 @@ export const mixins = {
   subhead: css`
     font-family: ${variables.headerFont};
     font-size: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
   `,
 
   projectHeader: css`
@@ -100,10 +103,22 @@ export const mixins = {
     }
   `,
 
+  secondaryFont: css`
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Catamaran", sans-serif;
+    text-transform: uppercase;
+  `,
+
   backgroundImg: css`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+  `,
+
+  boxShadow: css`
+    -webkit-box-shadow: 0px 4px 20px 4px rgba(217, 217, 217, 0.6);
+    box-shadow: 0px 4px 20px 4px rgba(217, 217, 217, 0.6);
   `,
 
   textGradient: css`
@@ -195,46 +210,6 @@ export const mixins = {
       variables.pagePadding}px) {
       margin-right: 20px;
       left: 0;
-    }
-  `,
-
-  // forms
-  formFlex: css`
-    display: flex;
-    div {
-      flex-grow: 1;
-      &:not(:first-of-type) {
-        padding-left: 20px;
-      }
-    }
-    @media (max-width: ${variables.mobile}px) {
-      flex-direction: column;
-      div {
-        &:not(:first-of-type) {
-          padding-left: 0;
-        }
-      }
-    }
-  `,
-
-  formField: css`
-    padding: 8px 0;
-    text-align: left;
-  `,
-
-  formInput: css`
-    border: 1px solid ${colors.formFieldBorder};
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: 0.3s border-color;
-    margin-bottom: 0;
-    &:focus {
-      outline: none;
-      border-color: ${colors.formFieldBorderFocus};
     }
   `,
 };

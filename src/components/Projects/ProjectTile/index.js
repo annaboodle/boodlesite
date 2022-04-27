@@ -43,6 +43,7 @@ export default function ProjectTile({
           display: flex;
           flex-direction: column;
           ${mixins.backgroundImg};
+          ${mixins.boxShadow};
           ${styles}
 
           @media (max-width: ${variables.mobile}px) {
@@ -74,11 +75,9 @@ export default function ProjectTile({
             background: url(${background});
             ${mixins.backgroundImg};
             height: 250px;
-            width: 80%;
 
             @media (max-width: ${variables.mobile}px) {
               display: block;
-              left: 20%;
               position: relative;
             }
           `}
@@ -111,13 +110,18 @@ export default function ProjectTile({
               position: relative;
               top: -30px;
               margin-bottom: -30px;
-              width: 80%;
               z-index: 1;
               border-width: 5px;
             }
           `}
         >
-          <p>{year}</p>
+          <p
+            css={css`
+              font-size: 14px;
+            `}
+          >
+            {year}
+          </p>
 
           <div
             css={css`
@@ -134,6 +138,7 @@ export default function ProjectTile({
             <p
               css={css`
                 margin: 0 0;
+                font-size: 14px;
               `}
             >
               {type}

@@ -12,7 +12,7 @@ import MailOpenIcon from "../../img/icons/mail-open.js";
 
 import ToolLink from "./ToolLink";
 
-import { variables, colors } from "../../styles/shared";
+import { variables, mixins, colors } from "../../styles/shared";
 
 export default function Footer() {
   return (
@@ -32,6 +32,8 @@ export default function Footer() {
     >
       <div
         css={css`
+          ${mixins.secondaryFont}
+
           @media (max-width: ${variables.mobile}px) {
             margin-bottom: 15px;
           }
@@ -100,7 +102,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="mailto:annabethcarroll@gmail.com"
+          href="mailto:annabethcarroll+website@gmail.com"
           css={css`
             display: flex;
             padding: 5px;

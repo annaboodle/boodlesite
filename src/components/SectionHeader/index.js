@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-import { variables } from "../../styles/shared";
+import { variables, mixins } from "../../styles/shared";
 
 export default function SectionHeader({ headline, subhead, color, anchor }) {
   return (
@@ -14,10 +14,7 @@ export default function SectionHeader({ headline, subhead, color, anchor }) {
     >
       <p
         css={css`
-          font-size: 10px;
-          text-transform: uppercase;
-          font-weight: 600;
-          font-family: ${variables.secondaryFont};
+          ${mixins.secondaryFont}
         `}
       >
         {subhead}

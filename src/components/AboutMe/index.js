@@ -30,14 +30,8 @@ export default function AboutMe() {
       </p>
 
       <p>
-        <a href="mailto:annabethcarroll@gmail.com">Reach out</a> if you'd like
-        to connect! (I'm ready to discuss UX, your favorite board games, or any
-        animals you've encountered recently.)
-      </p>
-
-      <p>
-        PS. You're also welcome to <a href={Resume}>check out my resume</a> or
-        read more about <Link to={paths.about}>how I got into UX.</Link>
+        You're also welcome to <a href={Resume}>check out my resume</a> or read
+        more about <Link to={paths.about}>how I got into UX.</Link>
       </p>
     </div>
   );

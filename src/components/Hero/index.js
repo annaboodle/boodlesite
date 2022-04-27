@@ -34,7 +34,6 @@ export default function Hero() {
 
           @media (max-width: ${variables.mobile}px) {
             left: 0;
-            // padding: 0 40px;
             max-width: 550px;
           }
         `}
@@ -58,6 +57,7 @@ export default function Hero() {
           top: 25px;
 
           @media (max-width: ${variables.mobile}px) {
+            text-align: center;
             left: 0;
             top: 0;
             padding: 25px 0 0;
@@ -86,7 +86,7 @@ export default function Hero() {
         </h1>
         <p
           css={css`
-            font-size: 26px;
+            font-size: 22px;
             font-weight: light;
             color: #4a4a4a;
             line-height: initial;

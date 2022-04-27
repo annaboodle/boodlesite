@@ -31,8 +31,8 @@ export default function Homeward() {
               ${mixins.subhead}
             `}
           >
-            {/* An app for hunting for shared apartments  */}
-            Find the right roommate and hunt for your new home &mdash; together
+            An app for finding roommates and shared apartments &mdash; at the
+            same time
           </p>
         </div>
 

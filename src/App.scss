@@ -1,7 +1,7 @@
 // variables
 $mobile: 768px;
 $headerFont: "Days One", sans-serif;
-$bodyFont: "Fanwood Text", serif;
+$bodyFont: "Open Sans", sans-serif;
 
 :root {
   --gradient-start: #ff5092; // pink
@@ -54,7 +54,7 @@ p {
 p,
 li {
   line-height: 1.5em;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 li p {
@@ -67,12 +67,6 @@ a {
   &:hover {
     color: var(--link-hover);
   }
-}
-
-strong {
-  font-family: "PT Serif", serif;
-  font-size: 14.5px;
-  font-weight: 700;
 }
 
 figure {
@@ -124,7 +118,7 @@ figcaption {
 
   label {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 8px;
   }
 }
 
