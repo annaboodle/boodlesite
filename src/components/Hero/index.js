@@ -1,5 +1,6 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+
+import { css, jsx } from "@emotion/react";
 
 import { mixins, variables } from "../../styles/shared";
 
@@ -7,7 +8,7 @@ import me from "../../img/about-me/me.jpg";
 
 export default function Hero() {
   return (
-    <div
+    <div className="hero"
       css={css`
         display: flex;
         justify-content: center;

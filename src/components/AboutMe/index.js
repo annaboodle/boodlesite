@@ -1,11 +1,8 @@
-import { HashLink as Link } from "react-router-hash-link";
+/** @jsxImportSource @emotion/react */
 
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/react";
 
-import Resume from "../../img/AnnabethCarroll.pdf";
-
-import { variables, paths } from "../../styles/shared";
+import { variables } from "../../styles/shared";
 
 export default function AboutMe() {
   return (
@@ -19,19 +16,14 @@ export default function AboutMe() {
       `}
     >
       <p>
-        I'm a design technologist with a background in front-end web
-        development, marketing, and customer support.
-      </p>
-
-      <p>
         I love thinking about how technology shapes how we see and interact with
         our world. I believe that design thinking is the way to create
         beautiful, empathetic products.
       </p>
 
       <p>
-        You're also welcome to <a href={Resume}>check out my resume</a> or read
-        more about <Link to={paths.about}>how I got into UX.</Link>
+        My home base is Seattle, where you'll find me enjoying live music,
+        playing board games, and visiting all the ice cream shops.
       </p>
     </div>
   );

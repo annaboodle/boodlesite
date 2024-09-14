@@ -1,0 +1,242 @@
+@import "./modal.scss";
+@import "./projectTiles.scss";
+@import "./variables.scss";
+@import "./shared.scss";
+
+:root {
+  --gradient-start: #ff5092; // pink
+  --gradient-mid: #ff9182; // sunset orange
+  --gradient-mid2: #ffbc74; // darker gold
+  --gradient-end: #ffd869; // bright gold
+
+  --link-color: #e31e68; // darker pink for contrast
+  --link-hover: #ff9182;
+
+  --callout-bg: #eeeeee;
+  --quote-decoration: #202020;
+}
+
+// shared
+.App {
+  overflow: hidden;
+  position: relative;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+// fonts & typography
+body,
+input,
+textarea {
+  font-family: $bodyFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headerFont;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  margin-top: 0;
+}
+
+p,
+li {
+  line-height: 1.5em;
+  font-size: 17px;
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
+figure {
+  margin: 30px 40px;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+
+figcaption {
+  text-align: right;
+}
+
+// lock icons
+.lock {
+  &--small {
+    margin: 1px 8px 4px;
+  }
+
+  &--med {
+    margin: 0 8px 2px;
+  }
+
+  &--open.lock--small {
+    width: 14px;
+  }
+
+  &--closed.lock--small {
+    width: 10px;
+  }
+
+  &--open.lock--med {
+    width: 18px;
+  }
+
+  &--closed.lock--med {
+    width: 14px;
+  }
+}
+
+// layout 
+.column-wrapper {
+  display: flex;
+  column-gap: 24px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    ;
+  }
+}
+
+.column {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.column-list {
+  // when lists are inside columns
+  margin-top: 0;
+
+  @media (max-width: $mobile) {
+    margin: 0;
+  }
+}
+
+// special decorated text styles
+.callout {
+  border-radius: 18px;
+  margin-bottom: 16px;
+  display: flex;
+  column-gap: 18px;
+}
+
+.callout-bg {
+  background: var(--callout-bg);
+  padding: 16px 20px;
+  border-radius: 18px;
+}
+
+.callout-emoji {
+  font-size: 24px;
+}
+
+.quote {
+  border-left: 3px solid var(--quote-decoration);
+  padding-left: 14px;
+  padding-right: 14px;
+  width: 100%;
+}
+
+// animated gif styling 
+.prototype-gif-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.prototype-gif {
+  border-radius: 60px;
+  overflow: hidden;
+  width: 400px;
+}
+
+// project and about page font styles
+.project-page,
+.about-page {
+  h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+
+    @media (max-width: $mobile) {
+      font-size: 2.5em;
+    }
+  }
+
+  h2 {
+    position: relative;
+    left: -60px;
+
+    @media (max-width: $mobile) {
+      left: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 150px;
+      height: 3px;
+      display: block;
+      background-image: linear-gradient(90deg,
+          var(--gradient-start),
+          var(--gradient-end));
+      margin-bottom: 12px;
+      position: relative;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+.project-page {
+  h2 {
+    margin-top: 3em;
+  }
+}
+
+.about-page {
+  h2 {
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  label {
+    text-align: center;
+  }
+}

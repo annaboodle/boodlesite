@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 export const paths = {
   home: "/",
@@ -7,12 +7,14 @@ export const paths = {
 
   projectsAnchor: "/#projects",
   aboutAnchor: "/#about",
-  contactAnchor: "/#contact",
+  contactLink: "mailto:annabethcarroll+website@gmail.com",
 
   homeward: "/projects/homeward",
   hubDesignSystem: "/projects/hubspot-design-system",
   pegaTours: "/projects/pega-tours",
   hubHomepage: "/projects/hubspot-homepage",
+  workGaps: "/projects/work-gaps",
+  aiSuggestions: "/projects/ai-suggestions",
 };
 
 export const colors = {
@@ -21,7 +23,7 @@ export const colors = {
   midColor2: "#ffbc74", // darker gold
   endColor: "#ffd869", // bright gold
 
-  linkColor: "#ff5092",
+  linkColor: "#e31e68", // darker pink for contrast
   linkHoverColor: "#FF9182",
 
   textColor: "#2d2d2d",
@@ -39,7 +41,7 @@ export const variables = {
   mobile: 768,
 
   largePageWidth: 1000,
-  smallPageWidth: 600,
+  smallPageWidth: 700,
 
   pagePadding: 20, // padding on left and right sides of page
 
@@ -89,10 +91,10 @@ export const helper = {
 export const mixins = {
   subhead: css`
     font-family: ${variables.headerFont};
-    font-size: 1.3em;
+    font-size: 1.6em;
     margin-left: auto;
     margin-right: auto;
-    max-width: 550px;
+    max-width: 800px;
   `,
 
   projectHeader: css`
@@ -154,7 +156,7 @@ export const mixins = {
     margin-top: 20px;
 
     @media (max-width: ${1.5 * variables.smallPageWidth -
-      variables.pagePadding}px) {
+    variables.pagePadding}px) {
       width: 100%;
       left: 0;
     }
@@ -175,15 +177,15 @@ export const mixins = {
   `,
 
   fullWidthImg: css`
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 150%;
     position: relative;
     left: -25%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 30px;
     @media (max-width: ${1.5 * variables.smallPageWidth -
-      variables.pagePadding}px) {
+    variables.pagePadding}px) {
       width: 100%;
       left: 0;
     }
@@ -195,7 +197,7 @@ export const mixins = {
     margin-left: calc(-25% + 20px);
     right: -25%;
     @media (max-width: ${1.5 * variables.smallPageWidth -
-      variables.pagePadding}px) {
+    variables.pagePadding}px) {
       margin-left: 20px;
       right: 0;
     }
@@ -207,7 +209,7 @@ export const mixins = {
     margin-right: calc(-25% + 20px);
     left: -25%;
     @media (max-width: ${1.5 * variables.smallPageWidth -
-      variables.pagePadding}px) {
+    variables.pagePadding}px) {
       margin-right: 20px;
       left: 0;
     }

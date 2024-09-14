@@ -1,5 +1,6 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+
+import { css } from "@emotion/react";
 
 import { mixins, variables } from "../../styles/shared";
 

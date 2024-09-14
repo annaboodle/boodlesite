@@ -1,5 +1,6 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+
+import { css } from "@emotion/react";
 
 import { mixins, variables } from "../../styles/shared";
 
@@ -13,6 +14,7 @@ import hubspot from "../../img/about-me/hubspot.png";
 import pega from "../../img/about-me/pega.png";
 import twine from "../../img/about-me/twine.png";
 import vassar from "../../img/about-me/vassar.png";
+import indeed from "../../img/about-me/jobby.jpg";
 
 export default function About() {
   const aboutPageSectionStyles = css`
@@ -57,7 +59,7 @@ export default function About() {
               ${mixins.subhead}
             `}
           >
-            AKA, "How'd you get to be a design technologist?"
+            A winding path from building robots to building experiences
           </p>
         </div>
 
@@ -68,7 +70,7 @@ export default function About() {
             margin-left: calc(-25% + 20px);
 
             @media (max-width: ${1.5 * variables.smallPageWidth -
-              variables.pagePadding}px) {
+            variables.pagePadding}px) {
               margin-left: 20px;
               right: 0;
             }
@@ -98,7 +100,7 @@ export default function About() {
           ${aboutPageSectionStyles}
         `}
       >
-        <CirclePhoto url={vassar} label="Vassar's castle!" side="left" />
+        <CirclePhoto url={vassar} label="Leaping for joy by the iconic Vassar library" side="left" />
 
         <div>
           <h2>Vassar College</h2>
@@ -128,7 +130,7 @@ export default function About() {
       >
         <CirclePhoto
           url={hubspot}
-          label="HubSpot's annual conference!"
+          label="Hijinks at HubSpot's annual conference"
           side="right"
         />
 
@@ -167,7 +169,7 @@ export default function About() {
       >
         <CirclePhoto
           url={twine}
-          label="Twine's beautiful neon sign!"
+          label="Twine's fabulous neon sign"
           side="left"
         />
 
@@ -198,15 +200,14 @@ export default function About() {
           ${aboutPageSectionStyles}
         `}
       >
-        <CirclePhoto url={pega} label="Pega headgear!" side="right" />
+        <CirclePhoto url={pega} label="Fashionable Pega headgear" side="right" />
 
         <div>
           <h2>Pegasystems</h2>
           <p>
             After some freelance web development, I decided to make another
             slight career pivot, joining Pegasystems as a Product Architect.
-            This hybrid role is incredibly collaborative, with most projects
-            connecting some combination of development, design, and marketing.
+            This hybrid role was incredibly collaborative, with most projects connecting some combination of development, design, and marketing.
           </p>
           <p>
             Now at my third software company, I was finally starting to consider
@@ -214,6 +215,27 @@ export default function About() {
             enrolled in a User Experience Design class at General Assembly.
             Within the first week, I realized that all of my favorite parts of
             past positions were related to user experience. I was hooked.
+          </p>
+        </div>
+      </div>
+
+      {/**************************************/}
+      {/**************************************/}
+      {/**************************************/}
+      <div
+        css={css`
+          ${aboutPageSectionStyles}
+        `}
+      >
+        <CirclePhoto url={indeed} label="My prized Indeed pin collection" side="left" />
+
+        <div>
+          <h2>Indeed</h2>
+          <p>
+            As a design technologist, my role bridged the gap between design and development. I created designs, built interactive prototypes, validated them with user research, and collaborated with engineers to implement new features. Over my 5 years at Indeed, I leaned into my strengths to solve problems for job seekers, connect engineers with the design process, and build a polished, accessible product.
+          </p>
+          <p>
+            I primarily worked with the Profile team to help job seekers improve their resumes and highlight their skills to employers. I’m so proud of my team’s work to improve the process of job searching, and I look forward to using this experience to solve new problems wherever my career takes me.
           </p>
         </div>
       </div>

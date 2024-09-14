@@ -1,8 +1,9 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+
+import { css } from "@emotion/react";
 
 import EmotionIcon from "../../img/icons/emotion.png";
-import SketchIcon from "../../img/icons/sketch.png";
+import FigmaIcon from "../../img/icons/figma.png";
 import ReactIcon from "../../img/icons/react.png";
 import GithubIcon from "../../img/icons/github.png";
 
@@ -32,8 +33,8 @@ export default function Footer() {
     >
       <div
         css={css`
-          ${mixins.secondaryFont}
-
+          font-size: 12px;
+          font-weight: bold;
           @media (max-width: ${variables.mobile}px) {
             margin-bottom: 15px;
           }
@@ -56,9 +57,9 @@ export default function Footer() {
         />
         {`, and `}
         <ToolLink
-          name="Sketch"
-          link="https://www.sketch.com/"
-          img={SketchIcon}
+          name="Figma"
+          link="https://www.figma.com/"
+          img={FigmaIcon}
         />
       </div>
 

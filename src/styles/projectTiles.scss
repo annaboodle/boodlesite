@@ -1,0 +1,158 @@
+@import "./variables.scss";
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+    max-width: #{$largePageWidth}px;
+
+    @media (max-width: $mobile) {
+        padding: 20px #{$pagePadding}px 50px;
+        gap: 0;
+
+    }
+}
+
+.projects-row {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+    }
+}
+
+.project-tile {
+    flex: 0 0 calc(50% - 20px);
+    color: initial;
+
+    @media (max-width: $mobile) {
+        flex: 1 0 calc(100% - 30px);
+        margin: 20px 0;
+        max-width: 600px;
+    }
+
+    &:hover {
+        color: initial;
+    }
+}
+
+.project-tile--inner1,
+.project-tile--inner2 {
+    border-radius: 30px;
+}
+
+
+.project-tile--inner1 {
+    // background url gets passed into  the ProjectTile component
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 400px;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-height: 0;
+        margin: 0 0 1px;
+        background: #fff;
+    }
+}
+
+.project-tile--image-mobile {
+    // background url gets passed into  the ProjectTile component
+    display: none;
+    height: 375px;
+    border-radius: 30px;
+
+
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+    }
+}
+
+.project-tile--inner2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s opacity, 0.3s border-width, 0.3s margin;
+    opacity: 0;
+    background-image: linear-gradient($startColor, $endColor);
+
+    @media (min-width: calc($mobile + 1px)) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        opacity: 1;
+        border-width: 30px;
+        background: #fff;
+        position: relative;
+        top: -30px;
+        margin-bottom: -30px;
+        z-index: 1;
+        border-width: 5px;
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+.project-tile--copy {
+    background: #ffffffed;
+    display: flex;
+    align-self: stretch;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    padding: 20px;
+    border-radius: 26px;
+}
+
+.project-tile--info {
+    text-align: center;
+}
+
+.project-tile--title {
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-tile--type {
+    margin: 0 0;
+    font-size: 14px;
+}
+
+.project-tile--logo {
+    max-width: 100px;
+    max-height: 22px;
+    margin: 15px 20px;
+}
+
+
+.project-tile--more-link {
+    margin: 16px 0 0;
+    font-family: $headerFont;
+    font-size: 12px;
+    color: $startColor;
+
+    &:after {
+        content: "";
+        width: 100%;
+    }
+}

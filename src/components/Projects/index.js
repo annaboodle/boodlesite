@@ -1,93 +1,74 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
 
-import { variables, paths } from "../../styles/shared";
+import { paths } from "../../styles/shared";
 
 import ProjectTile from "./ProjectTile";
 
 import hubHomepage from "../../img/hub-homepage/cover.jpg";
-import homeward from "../../img/homeward/cover.png";
-import pegaTours from "../../img/pega-tours/cover.png";
+import homeward from "../../img/homeward/user-flow.jpeg";
+import pegaTours from "../../img/pega-tours/tours-hero.png";
 import hubDesignSystem from "../../img/hub-design-system/cover.jpg";
 
-export default function Projects() {
-  const first = css`
-    position: relative;
-    top: -50px;
-    min-height: 400px;
-  `;
-  const second = css`
-    position: relative;
-    min-height: 300px;
-    width: 100%;
-  `;
-  const third = css`
-    position: relative;
-    top: -50px;
-    left: -50px;
-    min-height: 300px;
-  `;
-  const fourth = css`
-    position: relative;
-    left: -50px;
-    min-height: 400px;
-  `;
+import PegaLogo from "../../img/company-logos/pega-logo.png";
+import HubSpotLogo from "../../img/company-logos/hubspot-logo.png";
+import IndeedLogo from "../../img/company-logos/indeed-logo.png";
 
+import aiSuggestions from "../../img/ai-suggestions/ai-hero-square.png";
+import workGaps from "../../img/work-gaps/work-gaps-hero-square.png";
+
+export default function Projects({ isVerified, setIsVerified, pwModalOpen, setPwModalStatus, desiredPath, setDesiredPath }) {
   return (
     <div
-      css={css`
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        max-width: ${variables.largePageWidth}px;
-        padding: calc(20px + 50px) calc(${variables.pagePadding}px + 0.5 * 50px)
-          50px calc(${variables.pagePadding}px + 50px);
-
-        @media (max-width: ${variables.mobile}px) {
-          padding: 20px ${variables.pagePadding}px;
-        }
-      `}
+      className="projects"
     >
       <ProjectTile
-        background={homeward}
-        year="2018"
-        name="Homeward"
-        type="ux design // ux research // prototyping"
-        side="left"
-        vertical="bottom"
-        styles={first}
-        link={paths.homeward}
+        background={aiSuggestions}
+        name="Helping job seekers describe their work experience with generative AI"
+        logo={IndeedLogo}
+        type="ux design // prototyping // usability testing // content design // prompt engineering"
+        link={paths.aiSuggestions}
+        protected={true}
+        setPwModalStatus={setPwModalStatus}
+        setDesiredPath={setDesiredPath}
+        isVerified={isVerified}
+      />
+      <ProjectTile
+        background={workGaps}
+        name="Helping job seekers explain work gaps on their resume"
+        logo={IndeedLogo}
+        type="ux design // prototyping // usability testing // content design"
+        link={paths.workGaps}
+        protected={true}
+        setPwModalStatus={setPwModalStatus}
+        setDesiredPath={setDesiredPath}
+        isVerified={isVerified}
       />
       <ProjectTile
         background={hubDesignSystem}
-        year="2016"
-        name="HubSpot design system"
-        type="front-end dev // ux research // training"
-        side="right"
-        vertical="bottom"
-        styles={second}
+        name="Designing, building, and implementing HubSpot's first web design and development style guide"
+        logo={HubSpotLogo}
+        type="front-end dev // user interviews // internal training"
         link={paths.hubDesignSystem}
       />
       <ProjectTile
+        background={hubHomepage}
+        name="Designing, testing, and building a homepage for a prominent SaaS company"
+        logo={HubSpotLogo}
+        type="front-end dev // a11y // interaction design"
+        link={paths.hubHomepage}
+      />
+      <ProjectTile
         background={pegaTours}
-        year="2018"
-        name="Onboarding tours"
-        type="ux design // ux research // copywriting"
-        side="left"
-        vertical="top"
-        styles={third}
+        name="Creating onboarding tours to improve engagement with a software trial product"
+        logo={PegaLogo}
+        type="ux design // usability testing // content design"
         link={paths.pegaTours}
       />
       <ProjectTile
-        background={hubHomepage}
-        year="2016"
-        name="HubSpot homepage redesign"
-        type="front-end dev // interaction design"
-        side="right"
-        vertical="top"
-        styles={fourth}
-        link={paths.hubHomepage}
+        background={homeward}
+        name="Designing an app for renters to find compatible roommates and apartments"
+        type="ux design // user interviews // persona development // feature prioritization // prototyping"
+        link={paths.homeward}
       />
     </div>
   );

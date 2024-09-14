@@ -1,17 +1,23 @@
+/** @jsxImportSource @emotion/react */
+
 import { useState } from "react";
 
 import { HashLink as Link } from "react-router-hash-link";
 
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/react";
 
 import logo from "../../img/logo/logo.png";
 
 import Close from "../../img/icons/close";
 
+import Resume from "../../img/AnnabethCarroll.pdf";
+
 import { variables, paths, colors, helper } from "../../styles/shared";
 
-export default function Nav({ showHomeLink }) {
+import LockIcon from "../../icons/LockIcon";
+import UnlockIcon from "../../icons/UnlockIcon";
+
+export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOpen, setPwModalStatus, desiredPath, setDesiredPath }) {
   const [showMobileMenu, updateShowMobileMenu] = useState(false);
   const [showSecondaryMenu, updateShowSecondaryMenu] = useState(-1); // index of which secondary menu to show; if -1, no secondary menu shown
 
@@ -21,8 +27,14 @@ export default function Nav({ showHomeLink }) {
       link: paths.projectsAnchor,
       secondary: [
         {
-          name: "Homeward",
-          link: paths.homeward,
+          name: "AI-generated resume suggestions",
+          link: paths.aiSuggestions,
+          protected: true
+        },
+        {
+          name: "Work gaps",
+          link: paths.workGaps,
+          protected: true
         },
         {
           name: "HubSpot design system",
@@ -33,9 +45,13 @@ export default function Nav({ showHomeLink }) {
           link: paths.hubHomepage,
         },
         {
-          name: "Onboarding tours",
+          name: "Pegasystems onboarding tours",
           link: paths.pegaTours,
         },
+        {
+          name: "Apartment & roommate finding app",
+          link: paths.homeward,
+        }
       ],
     },
     {
@@ -43,15 +59,20 @@ export default function Nav({ showHomeLink }) {
       link: paths.about,
     },
     {
+      name: "Resume",
+      mailto: Resume,
+      newWindow: true
+    },
+    {
       name: "Contact",
-      link: paths.contactAnchor,
+      mailto: paths.contactLink,
     },
   ];
 
   const navItemFont = css`
-    font-family: ${variables.secondaryFont};
-    text-transform: uppercase;
-    font-weight: 600;
+    font-family: ${variables.headerFont};
+    // text-transform: uppercase;
+    font-weight: normal;
     font-size: 14px;
   `;
 
@@ -75,7 +96,7 @@ export default function Nav({ showHomeLink }) {
           top: 0;
 
           ${showMobileMenu &&
-          `
+        `
             position: fixed;
             left: 0;
             background: #fff;
@@ -118,8 +139,12 @@ export default function Nav({ showHomeLink }) {
         `}
       >
         {navItems.map((navItem, i) => {
+          const isMailto = navItem.mailto ? true : false; // Check if mailto exists
           return (
             <li
+              css={css`
+                margin-bottom: 0;
+                     `}
               onMouseEnter={() => {
                 updateShowSecondaryMenu(i);
               }}
@@ -128,10 +153,30 @@ export default function Nav({ showHomeLink }) {
               }}
               key={i}
             >
-              <Link
-                smooth
-                to={navItem.link}
-                css={css`
+              {/* Conditionally render based on link or mailto */}
+              {isMailto ? (
+                <a
+                  href={navItem.mailto}
+                  target={navItem.newWindow && "_blank"}
+                  css={css`
+            color: ${colors.textColor};
+            padding: 10px 20px;
+            ${navItemFont}
+            @media (max-width: ${variables.mobile}px) {
+              display: flex;
+            }
+          `}
+                  onClick={() => {
+                    updateShowMobileMenu(!showMobileMenu);
+                  }}
+                >
+                  {navItem.name}
+                </a>
+              ) : (
+                <Link
+                  smooth
+                  to={navItem.link}
+                  css={css`
                   color: ${colors.textColor};
                   padding: 10px 20px;
                   ${navItemFont}
@@ -139,14 +184,15 @@ export default function Nav({ showHomeLink }) {
                     display: flex;
                   }
                 `}
-                onClick={() => {
-                  updateShowMobileMenu(!showMobileMenu);
-                }}
-              >
-                {navItem.name}
-              </Link>
+                  onClick={() => {
+                    updateShowMobileMenu(!showMobileMenu);
+                  }}
+                >
+                  {navItem.name}
+                </Link>
+              )}
 
-              {/* if there are secondary items, build them under their primary header item */}
+              {/* if there are secondary items, build them under their primary header item  */}
               {navItem.secondary && (
                 <ul
                   css={css`
@@ -156,7 +202,7 @@ export default function Nav({ showHomeLink }) {
                     padding: 0 0;
                     z-index: 1;
                     list-style: none;
-                    top: calc(100% + 10px);
+                    top: calc(100% + 8px);
                     @media (max-width: ${variables.mobile}px) {
                       display: block;
                       position: relative;
@@ -191,32 +237,64 @@ export default function Nav({ showHomeLink }) {
                     `}
                   >
                     {navItem.secondary.map((secondaryItem, j) => {
+                      const Parent = (secondaryItem.protected && !isVerified) ? 'div' : Link;
+                      const handleClick = () => {
+                        if (secondaryItem.protected && !isVerified) {
+                          setPwModalStatus(true);
+                          setDesiredPath(secondaryItem.link);
+                        } else {
+                          updateShowSecondaryMenu(-1);
+                          updateShowMobileMenu(!showMobileMenu);
+                        }
+                      };
+
                       return (
-                        <li key={j}>
-                          <Link
-                            smooth
-                            to={secondaryItem.link}
+                        <li key={j}
+                          css={css`
+                          margin-bottom: 0;
+                              `}
+                        >
+                          <Parent
+                            to={secondaryItem.protected && !isVerified ? undefined : secondaryItem.link}
+
                             css={css`
+                              display: flex;
+                              align-items: center;
                               color: ${colors.textColor};
                               display: flex;
                               padding: 5px 20px;
+                              cursor: pointer;
+                              &:hover {
+                                color: ${colors.linkHoverColor};
+                                }
                               ${navItemFont}
                               ${j === navItem.secondary.length - 1
                                 ? "padding-bottom: 15px;"
                                 : ""} // more bottom padding on last item
                               @media (min-width: ${variables.mobile + 1}px) {
                                 ${j === 0
-                                  ? "padding-top: 15px;"
-                                  : ""}// more top padding on first item (desktop only)
+                                ? "padding-top: 15px;"
+                                : ""}// more top padding on first item (desktop only)
                               }
                             `}
-                            onClick={() => {
-                              updateShowSecondaryMenu(-1); // hide secondary menu when item is clicked
-                              updateShowMobileMenu(!showMobileMenu);
-                            }}
+                            onClick={handleClick}
+
+
                           >
-                            {secondaryItem.name}
-                          </Link>
+
+                            <span>
+                              {secondaryItem.name}
+                            </span>
+                            {secondaryItem.protected && (
+                              <>
+                                {isVerified ? (
+                                  <UnlockIcon className="lock lock--open lock--small" />
+                                ) : (
+                                  <LockIcon className="lock lock--closed lock--small" />
+                                )}
+                              </>
+                            )}
+                          </Parent>
                         </li>
                       );
                     })}

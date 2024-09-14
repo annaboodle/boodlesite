@@ -1,5 +1,6 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+
+import { css } from "@emotion/react";
 
 import { colors } from "../../../styles/shared";
 
@@ -74,7 +75,7 @@ export default function ToolLink({ name, link, img }) {
             ${toolIconStyles}
           `}
           src={img}
-          alt="sketch"
+          alt={name}
         />
       </span>
       {name}

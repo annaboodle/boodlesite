@@ -1,0 +1,103 @@
+@import "./variables.scss";
+
+.modal-title {
+    margin-top: 0;
+}
+
+.input {
+    border: 1px solid $form-field-border;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s border-color;
+    margin-bottom: 0;
+
+    &:focus {
+        outline: none;
+        border-color: var(--link-color);
+    }
+}
+
+.button {
+    border: none;
+    background: var(--link-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    width: auto;
+    padding: 12px 50px;
+    margin: 20px auto 0;
+    transition: 0.3s opacity;
+    -webkit-appearance: none;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.modal-wrap {
+    display: none;
+
+    &.modal-open {
+        display: block;
+
+        .modal-bg {
+            content: "";
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            background: $overlay;
+            top: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        .modal {
+            background: #fff;
+            padding: 40px;
+            position: fixed;
+            z-index: 100;
+            max-height: 80vh;
+            width: 50vw;
+            top: 25%;
+            left: 25vw;
+            box-shadow: 0px 0px 62px -13px rgba(173, 173, 173, 1);
+            overflow-y: scroll;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 3;
+
+            @media (max-width: $mobile) {
+                top: 24px;
+                position: fixed;
+            }
+
+            &:before {
+                content: "";
+                background: #fff;
+                width: 46px;
+                height: 46px;
+                border-radius: 49px;
+                top: -10px;
+                left: -12px;
+                opacity: 1;
+                position: absolute;
+                transition: 0.2s all;
+                z-index: -1;
+            }
+        }
+    }
+
+    .close-icon {
+        cursor: pointer;
+    }
+}

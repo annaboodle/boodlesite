@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- 
+<!-- 
     Since you're out for adventure, here are some wonderful facts about zebras: 
     • A group of zebras is called a dazzle. ✨
     • Zebras are black animals with white stripes. 🖤
@@ -10,32 +10,29 @@
     • Zebras cannot see the color orange. 🍊
 -->
 
-  <head>
-    <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
 
-    <link rel="icon" href="%PUBLIC_URL%/android-icon-192x192.png" />
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Hi, I'm Annabeth! Nice to meet you." />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Hi, I'm Annabeth! Nice to meet you." />
 
-    <!-- fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Days+One&family=Catamaran:wght@700&family=Open+Sans:wght@400;600"
-      rel="stylesheet"
-    />
+  <!-- fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Days+One&family=Catamaran:wght@700&family=Open+Sans:wght@400;600&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
 
-    <!--
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -45,57 +42,57 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
-    <title>Annabeth Carroll</title>
+  <title>Annabeth Carroll</title>
 
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-3X8Z6SEJK8"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
       }
-      gtag("js", new Date());
+    })(window.location);
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
 
-      gtag("config", "G-3X8Z6SEJK8");
-    </script>
-    <!-- END: Global site tag (gtag.js) - Google Analytics -->
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-3X8Z6SEJK8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-3X8Z6SEJK8");
+  </script>
+  <!-- END: Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
 </html>
