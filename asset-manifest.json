@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.18192420.css",
-    "main.js": "/static/js/main.caf12cbd.js",
+    "main.css": "/static/css/main.e136eeda.css",
+    "main.js": "/static/js/main.25123ad0.js",
     "static/media/work-gaps-animated.gif": "/static/media/work-gaps-animated.52c247ecd377f8b65f35.gif",
     "static/media/final-ai-suggestions.gif": "/static/media/final-ai-suggestions.d73265ec418366f34d88.gif",
     "static/media/tours-hero.png": "/static/media/tours-hero.9ae481286a095c54903a.png",
@@ -73,11 +73,11 @@
     "static/media/testimonial+light+no+headshot.png": "/static/media/testimonial+light+no+headshot.7eb445cce6f4adb55b7a.png",
     "static/media/logo.png": "/static/media/logo.6cdef6765ea9dc103a8b.png",
     "index.html": "/index.html",
-    "main.18192420.css.map": "/static/css/main.18192420.css.map",
-    "main.caf12cbd.js.map": "/static/js/main.caf12cbd.js.map"
+    "main.e136eeda.css.map": "/static/css/main.e136eeda.css.map",
+    "main.25123ad0.js.map": "/static/js/main.25123ad0.js.map"
   },
   "entrypoints": [
-    "static/css/main.18192420.css",
-    "static/js/main.caf12cbd.js"
+    "static/css/main.e136eeda.css",
+    "static/js/main.25123ad0.js"
   ]
 }
