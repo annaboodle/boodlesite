@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e136eeda.css",
-    "main.js": "/static/js/main.25123ad0.js",
+    "main.js": "/static/js/main.8d6cd622.js",
     "static/media/work-gaps-animated.gif": "/static/media/work-gaps-animated.52c247ecd377f8b65f35.gif",
     "static/media/final-ai-suggestions.gif": "/static/media/final-ai-suggestions.d73265ec418366f34d88.gif",
     "static/media/tours-hero.png": "/static/media/tours-hero.9ae481286a095c54903a.png",
@@ -59,6 +59,7 @@
     "static/media/walkme+editor.png": "/static/media/walkme+editor.f20df4229d36987cb00c.png",
     "static/media/persona-img.jpeg": "/static/media/persona-img.c447bdd1e79848085e35.jpeg",
     "static/media/results.png": "/static/media/results.fe554f76be6ce7397a61.png",
+    "static/media/abc.png": "/static/media/abc.7e87b928ae4c4e40285a.png",
     "static/media/AnnabethCarroll.pdf": "/static/media/AnnabethCarroll.4edc7fa70dbb1b2641a7.pdf",
     "static/media/colors.png": "/static/media/colors.1e004cfb51c4dff53a30.png",
     "static/media/affinity-map.jpeg": "/static/media/affinity-map.d61665290a1a6f77ec2c.jpeg",
@@ -71,13 +72,12 @@
     "static/media/sketch-small.jpeg": "/static/media/sketch-small.194d974690b850f8feb8.jpeg",
     "static/media/indeed-logo.png": "/static/media/indeed-logo.c4d840de5ead0ec0f40c.png",
     "static/media/testimonial+light+no+headshot.png": "/static/media/testimonial+light+no+headshot.7eb445cce6f4adb55b7a.png",
-    "static/media/logo.png": "/static/media/logo.6cdef6765ea9dc103a8b.png",
     "index.html": "/index.html",
     "main.e136eeda.css.map": "/static/css/main.e136eeda.css.map",
-    "main.25123ad0.js.map": "/static/js/main.25123ad0.js.map"
+    "main.8d6cd622.js.map": "/static/js/main.8d6cd622.js.map"
   },
   "entrypoints": [
     "static/css/main.e136eeda.css",
-    "static/js/main.25123ad0.js"
+    "static/js/main.8d6cd622.js"
   ]
 }
