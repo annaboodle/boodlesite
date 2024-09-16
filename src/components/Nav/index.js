@@ -6,7 +6,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 import { css } from "@emotion/react";
 
-import logo from "../../img/logo/logo.png";
+import logo from "../../img/logo/abc.png";
 
 import Close from "../../img/icons/close";
 
@@ -311,7 +311,7 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
     <div
       css={css`
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         min-height: ${variables.menuHeight}px;
         justify-content: ${showHomeLink ? "space-between" : "flex-end"};
         margin: 0 auto;
@@ -338,7 +338,7 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
           <div>
             <img
               src={logo}
-              alt="logo"
+              alt="return to homepage"
               css={css`
                 max-width: 38px;
                 display: none;
@@ -371,7 +371,7 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
       <div
         css={css`
           font-family: ${variables.headerFont};
-          font-size: 14px;
+          font-size: 16px;
           text-align: right;
           display: none;
           cursor: pointer;
