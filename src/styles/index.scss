@@ -149,8 +149,6 @@ figcaption {
 
 // special decorated text styles
 .callout {
-  border-radius: 18px;
-  margin-bottom: 16px;
   display: flex;
   column-gap: 18px;
 }
@@ -159,6 +157,15 @@ figcaption {
   background: var(--callout-bg);
   padding: 16px 20px;
   border-radius: 18px;
+  margin: 16px 0;
+
+  h3 {
+    margin-top: 16px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
 }
 
 .callout-emoji {

@@ -286,9 +286,9 @@ export default function AISuggestions() {
           To establish a shared understanding of what makes a strong work experience section, I consulted with Indeed’s top resume-writing coach to gather her high-level recommendations and insights into what employers prioritize. I distilled these findings into five key guidelines for our suggestions, including detailed explanations and examples of strong resume content.
         </p>
 
-        <div className="callout callout-bg">
-          <span className="callout-emoji">✏️</span>
+        <div className="callout-bg">
           <div>
+            <h3>Guidelines</h3>
             <p>Each bullet point on a resume should be:</p>
             <ol>
               <li>
@@ -315,6 +315,7 @@ export default function AISuggestions() {
         </p>
 
         <div className="callout-bg">
+          <h3>Examples</h3>
           <div className="column-wrapper">
             <p className="column">
               ❌ <strong>Too generic:</strong> Onboarded new employees

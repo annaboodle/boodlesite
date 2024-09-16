@@ -60,18 +60,17 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
     },
     {
       name: "Resume",
-      mailto: Resume,
+      atag: Resume,
       newWindow: true
     },
     {
       name: "Contact",
-      mailto: paths.contactLink,
+      atag: paths.contactLink,
     },
   ];
 
   const navItemFont = css`
     font-family: ${variables.headerFont};
-    // text-transform: uppercase;
     font-weight: normal;
     font-size: 14px;
   `;
@@ -139,7 +138,7 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
         `}
       >
         {navItems.map((navItem, i) => {
-          const isMailto = navItem.mailto ? true : false; // Check if mailto exists
+          const isAtag = navItem.atag ? true : false; // Check if atag exists
           return (
             <li
               css={css`
@@ -153,19 +152,19 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
               }}
               key={i}
             >
-              {/* Conditionally render based on link or mailto */}
-              {isMailto ? (
+              {/* Conditionally render based on Link or atag */}
+              {isAtag ? (
                 <a
-                  href={navItem.mailto}
+                  href={navItem.atag}
                   target={navItem.newWindow && "_blank"}
                   css={css`
-            color: ${colors.textColor};
-            padding: 10px 20px;
-            ${navItemFont}
-            @media (max-width: ${variables.mobile}px) {
-              display: flex;
-            }
-          `}
+                      color: ${colors.textColor};
+                      padding: 10px 20px;
+                      ${navItemFont}
+                      @media (max-width: ${variables.mobile}px) {
+                      display: flex;
+                    }
+                  `}
                   onClick={() => {
                     updateShowMobileMenu(!showMobileMenu);
                   }}
@@ -373,7 +372,6 @@ export default function Nav({ showHomeLink, isVerified, setIsVerified, pwModalOp
         css={css`
           font-family: ${variables.headerFont};
           font-size: 14px;
-          text-transform: uppercase;
           text-align: right;
           display: none;
           cursor: pointer;
