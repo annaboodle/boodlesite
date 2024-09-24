@@ -556,7 +556,7 @@ export default function WorkGaps() {
                 </p>
 
                 <p>
-                    Our last step was sharing the updated designs and copy with our partner experts from the focus group. Using on their feedback, we made some tweaks to the recommended bullet points for some of the work gaps.
+                    Our last step was sharing the updated designs and copy with our partner experts from the focus group. Using their feedback, we made some tweaks to the recommended bullet points for some of the work gaps.
                 </p>
 
                 {/* <p>

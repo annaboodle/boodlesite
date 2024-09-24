@@ -204,7 +204,7 @@ export default function AISuggestions() {
             Increase job seekers' confidence in their resumes.
           </li>
           <li>
-            Increase positive outcomes from job applications (e.g. messages from employers, interviews)
+            Increase positive outcomes from job applications (e.g. messages from employers, interviews).
           </li>
         </ol>
       </div>
@@ -494,7 +494,7 @@ export default function AISuggestions() {
             What do job seekers expect to happen when they select a suggestion?
           </li>
           <li>
-            How do job seekers feel about quality of the suggestions?
+            How do job seekers feel about the quality of the suggestions?
           </li>
           <li>
             Should suggestions appear before or after the user has the chance to enter their own content?
@@ -631,7 +631,7 @@ export default function AISuggestions() {
         </h2>
 
         <p>
-          Participant responses helped us validate that we’d solved for our user stories. Additionally, the positive feedback helped us show the value for this feature internally.
+          Participant responses helped us validate that we’d solved for the needs identified in our user stories. Additionally, the positive feedback helped us show the value for this feature internally.
         </p>
 
         <p className="quote">
