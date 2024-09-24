@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e136eeda.css",
-    "main.js": "/static/js/main.8d6cd622.js",
+    "main.js": "/static/js/main.c65d9f08.js",
     "static/media/work-gaps-animated.gif": "/static/media/work-gaps-animated.52c247ecd377f8b65f35.gif",
     "static/media/final-ai-suggestions.gif": "/static/media/final-ai-suggestions.d73265ec418366f34d88.gif",
     "static/media/tours-hero.png": "/static/media/tours-hero.9ae481286a095c54903a.png",
@@ -74,10 +74,10 @@
     "static/media/testimonial+light+no+headshot.png": "/static/media/testimonial+light+no+headshot.7eb445cce6f4adb55b7a.png",
     "index.html": "/index.html",
     "main.e136eeda.css.map": "/static/css/main.e136eeda.css.map",
-    "main.8d6cd622.js.map": "/static/js/main.8d6cd622.js.map"
+    "main.c65d9f08.js.map": "/static/js/main.c65d9f08.js.map"
   },
   "entrypoints": [
     "static/css/main.e136eeda.css",
-    "static/js/main.8d6cd622.js"
+    "static/js/main.c65d9f08.js"
   ]
 }
